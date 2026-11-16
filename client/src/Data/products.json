@@ -1,0 +1,119 @@
+[
+  {
+    "id": 1,
+    "name": "Foie Sain",
+    "image": "/assets/foie sain-image.jpg",
+    "logo": "/assets/foie sain-logo.jpg",
+    "form": "Syrup",
+    "color": "Caramel",
+    "packSize": "200 ml",
+    "description": "An Ayurvedic liver tonic formulated with traditional herbs to support liver function, digestion, and overall health.",
+    "composition": [
+      {
+        "name": "Bhring Raj",
+        "botanicalName": "Eclipta prostrata",
+        "quantity": "400 mg"
+      },
+      {
+        "name": "Sarphonka",
+        "botanicalName": "Tephrosia purpurea",
+        "quantity": "400 mg"
+      },
+      {
+        "name": "Rohitak Chhal",
+        "botanicalName": "Tecomella undulata",
+        "quantity": "400 mg"
+      },
+      {
+        "name": "Arjun Chhal",
+        "botanicalName": "Terminalia arjuna",
+        "quantity": "300 mg"
+      },
+      {
+        "name": "Ashwa Gandha",
+        "botanicalName": "Withania somnifera",
+        "quantity": "300 mg"
+      },
+      {
+        "name": "Giloy",
+        "botanicalName": "Tinospora cordifolia",
+        "quantity": "100 mg"
+      },
+      {
+        "name": "Daru Haldi",
+        "botanicalName": "Berberis aristata",
+        "quantity": "100 mg"
+      },
+      {
+        "name": "Harar",
+        "botanicalName": "Terminalia chebula",
+        "quantity": "200 mg"
+      },
+      {
+        "name": "Amla",
+        "botanicalName": "Phyllanthus emblica",
+        "quantity": "200 mg"
+      },
+      {
+        "name": "Bahera",
+        "botanicalName": "Terminalia bellirica",
+        "quantity": "200 mg"
+      },
+      {
+        "name": "Chitrak Mool",
+        "botanicalName": "Plumbago indica",
+        "quantity": "100 mg"
+      },
+      {
+        "name": "Makoy",
+        "botanicalName": "Solanum nigrum",
+        "quantity": "200 mg"
+      },
+      {
+        "name": "Vaividang",
+        "botanicalName": "Embelia ribes",
+        "quantity": "200 mg"
+      },
+      {
+        "name": "Pitpapra",
+        "botanicalName": "Fumaria indica",
+        "quantity": "100 mg"
+      },
+      {
+        "name": "Bhumi Amla",
+        "botanicalName": "Phyllanthus niruri",
+        "quantity": "300 mg"
+      },
+      {
+        "name": "Tulsi",
+        "botanicalName": "Ocimum tenuiflorum",
+        "quantity": "100 mg"
+      },
+      {
+        "name": "Kasni",
+        "botanicalName": "Cichorium intybus",
+        "quantity": "100 mg"
+      },
+      {
+        "name": "Saunf",
+        "botanicalName": "Foeniculum vulgare",
+        "quantity": "100 mg"
+      },
+      {
+        "name": "Pippali",
+        "botanicalName": "Piper longum",
+        "quantity": "50 mg"
+      },
+      {
+        "name": "Kali Mirch",
+        "botanicalName": "Piper nigrum",
+        "quantity": "50 mg"
+      },
+      {
+        "name": "Sounth",
+        "botanicalName": "Zingiber officinale",
+        "quantity": "50 mg"
+      }
+    ]
+  }
+]
