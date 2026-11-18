@@ -1,16 +1,20 @@
-import { Outlet } from 'react-router-dom';
+import { Outlet, useLocation } from 'react-router-dom';
 import { Header } from './Header';
 import { Footer } from './Footer';
 import { Toaster } from 'react-hot-toast';
+import { cn } from '../../lib/utils';
 
 export function Layout() {
+  const location = useLocation();
+  const isHome = location.pathname === '/';
+
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col min-h-screen bg-white text-black">
       <a href="#main-content" className="skip-link">
         Skip to main content
       </a>
       <Header />
-      <main id="main-content" className="flex-1 pt-20" role="main">
+      <main id="main-content" className={cn('flex-1', !isHome && 'pt-24')} role="main">
         <Outlet />
       </main>
       <Footer />
@@ -19,22 +23,17 @@ export function Layout() {
         toastOptions={{
           duration: 4000,
           style: {
-            background: '#1a1815',
-            color: '#faf9f6',
-            borderRadius: '12px',
-            padding: '16px',
-            boxShadow: '0 20px 48px rgba(26, 24, 21, 0.3)',
+            background: '#0E0E0E',
+            color: '#FFFFFF',
+            borderRadius: '9999px',
+            padding: '14px 24px',
+            fontSize: '14px',
+            fontWeight: 600,
           },
           success: {
             iconTheme: {
-              primary: '#16785f',
-              secondary: '#faf9f6',
-            },
-          },
-          error: {
-            iconTheme: {
-              primary: '#c0392b',
-              secondary: '#faf9f6',
+              primary: '#9EE6B2',
+              secondary: '#0E0E0E',
             },
           },
         }}

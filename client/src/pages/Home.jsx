@@ -1,22 +1,21 @@
-import { motion } from 'framer-motion';
 import { Hero } from '../components/sections/Hero';
-import { Features } from '../components/sections/Features';
 import { ProductGrid } from '../components/product/ProductGrid';
-import { CTA } from '../components/sections/CTA';
+import { Testimonials } from '../components/sections/Testimonials';
+import { GalleryCarousel } from '../components/sections/GalleryCarousel';
+import { Features } from '../components/sections/Features';
 
 export function Home() {
   return (
-    <>
+    <div className="flex flex-col">
       <Hero />
-      <Features />
       <ProductGrid
-        featuredOnly={true}
-        title="Our Flagship Product"
-        subtitle="Discover Foie Sain - our premium Ayurvedic liver tonic formulated with 23 time-tested herbs"
-        showViewAll={true}
+        title="Our Formulations"
+        subtitle="Classical Ayurvedic remedies crafted with WHO-GMP certified purity"
       />
-      <CTA />
-    </>
+      <Testimonials />
+      <GalleryCarousel />
+      <Features />
+    </div>
   );
 }
 

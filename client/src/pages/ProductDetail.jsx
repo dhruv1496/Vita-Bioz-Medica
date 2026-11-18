@@ -7,6 +7,7 @@ import { Separator } from '../components/ui/Separator';
 import { Button } from '../components/ui/Button';
 import { Badge } from '../components/ui/Badge';
 import { Card } from '../components/ui/Card';
+import { ProductGrid } from '../components/product/ProductGrid';
 import { productsApi } from '../lib/api';
 import { inquiriesApi } from '../lib/api';
 import { toast } from 'react-hot-toast';

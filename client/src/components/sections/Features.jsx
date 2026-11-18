@@ -1,119 +1,99 @@
 import { motion } from 'framer-motion';
-import { Leaf, Shield, FlaskConical, Truck, Heart, Sparkles } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import { Container } from '../ui/Container';
-import { Separator } from '../ui/Separator';
 
 const features = [
   {
-    icon: Leaf,
-    title: 'Authentic Ayurveda',
-    description: 'Formulations based on classical Ayurvedic texts, prepared using traditional methods passed down through generations.',
-    color: 'text-green-600',
-    bg: 'bg-green-50',
+    title: 'Personalized Care',
+    description: 'We provide classical formulations tailored to your metabolic balance, ensuring comfort, liver revitalization, and long-term vitality.',
+    btnText: 'Discover More +',
+    btnHref: '/products',
   },
   {
-    icon: Shield,
-    title: 'GMP Certified Quality',
-    description: 'Manufactured in WHO-GMP certified facilities with rigorous quality control at every stage of production.',
-    color: 'text-blue-600',
-    bg: 'bg-blue-50',
+    title: 'Advanced Science',
+    description: 'Our state-of-the-art laboratory utilizes precision hydro-extraction and HPLC standardization, adhering strictly to WHO-GMP protocols.',
+    btnText: 'Learn More +',
+    btnHref: '/quality',
   },
   {
-    icon: FlaskConical,
-    title: 'Scientific Validation',
-    description: 'Each product undergoes clinical evaluation and modern analytical testing to ensure safety and efficacy.',
-    color: 'text-purple-600',
-    bg: 'bg-purple-50',
-  },
-  {
-    icon: Heart,
-    title: 'Holistic Wellness',
-    description: 'Addressing root causes rather than symptoms, our products support the body\'s natural healing mechanisms.',
-    color: 'text-red-600',
-    bg: 'bg-red-50',
-  },
-  {
-    icon: Sparkles,
-    title: 'Pure Ingredients',
-    description: 'Sourced from certified organic farms, free from pesticides, heavy metals, and artificial additives.',
-    color: 'text-amber-600',
-    bg: 'bg-amber-50',
-  },
-  {
-    icon: Truck,
-    title: 'Pan-India Reach',
-    description: 'Efficient distribution network ensuring timely delivery across India with cold-chain logistics where needed.',
-    color: 'text-indigo-600',
-    bg: 'bg-indigo-50',
+    title: 'Expert Team',
+    description: 'Formulated by seasoned Ayurvedic vaidyas and pharmaceutical researchers dedicated to purity, safety, and classical efficacy.',
+    btnText: 'Meet the Team +',
+    btnHref: '/about',
   },
 ];
 
 export function Features() {
   return (
-    <section className="py-20 lg:py-28 bg-white" aria-labelledby="features-heading">
+    <section
+      className="py-28 text-white relative overflow-hidden"
+      style={{
+        background: 'linear-gradient(180deg, #1C60D5 0%, #154EB1 100%)',
+      }}
+      aria-labelledby="features-heading"
+    >
       <Container>
+        {/* Top Asterisk Badge */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: '-100px' }}
-          transition={{ duration: 0.6 }}
-          className="text-center max-w-3xl mx-auto mb-16"
+          viewport={{ once: true, margin: '-60px' }}
+          transition={{ duration: 0.5 }}
+          className="flex justify-start mb-12"
         >
-          <span className="inline-block px-4 py-1.5 bg-primary-muted text-primary rounded-full text-sm font-medium mb-4">
-            Our Commitment
-          </span>
-          <h2 id="features-heading" className="font-serif text-3xl lg:text-4xl font-semibold text-gray-900 mb-4">
-            Six Pillars of Excellence
-          </h2>
-          <p className="text-lg text-gray-600 leading-relaxed">
-            Every decision we make is guided by these core principles, ensuring you receive only the finest Ayurvedic healthcare.
-          </p>
-        </motion.div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-          {features.map((feature, index) => (
-            <motion.article
-              key={feature.title}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: '-100px' }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="group p-6 lg:p-8 bg-gray-50 rounded-2xl hover:bg-white hover:shadow-xl transition-all duration-300 border border-gray-100"
-            >
-              <div className={cn('h-14 w-14 rounded-2xl flex items-center justify-center mb-6', feature.bg, feature.color)}>
-                <feature.icon className="h-7 w-7" aria-hidden="true" />
-              </div>
-              <h3 className="font-serif text-xl font-semibold text-gray-900 mb-3 group-hover:text-primary transition-colors">
-                {feature.title}
-              </h3>
-              <p className="text-gray-600 leading-relaxed">{feature.description}</p>
-            </motion.article>
-          ))}
-        </div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: '-100px' }}
-          transition={{ duration: 0.6, delay: 0.6 }}
-          className="mt-16"
-        >
-          <Separator className="mb-10" />
-          <div className="grid md:grid-cols-3 gap-8 text-center">
-            <div className="p-6">
-              <p className="font-serif text-4xl lg:text-5xl font-bold text-primary">15+</p>
-              <p className="text-gray-600 mt-2">Years of Trusted Service</p>
-            </div>
-            <div className="p-6">
-              <p className="font-serif text-4xl lg:text-5xl font-bold text-primary">500+</p>
-              <p className="text-gray-600 mt-2">Healthcare Partners</p>
-            </div>
-            <div className="p-6">
-              <p className="font-serif text-4xl lg:text-5xl font-bold text-primary">50K+</p>
-              <p className="text-gray-600 mt-2">Lives Touched</p>
-            </div>
+          <div className="inline-flex items-center gap-3">
+            <span className="w-8 h-8 rounded-lg bg-white text-[#1C60D5] font-extrabold flex items-center justify-center text-lg shadow-sm">
+              ✳
+            </span>
+            <h2 id="features-heading" className="text-2xl font-bold tracking-tight text-white">
+              Key Features
+            </h2>
           </div>
         </motion.div>
+
+        {/* Center Floating Mockup */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.9 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true, margin: '-60px' }}
+          transition={{ duration: 0.7 }}
+          className="my-10 flex justify-center"
+        >
+          <div className="relative">
+            <img
+              src="/foie-sain-image.jpg"
+              alt="Foie Sain Tonic Display"
+              className="h-60 md:h-72 w-auto rounded-[32px] shadow-2xl object-cover animate-float border-2 border-white/20 bg-white/10 backdrop-blur-sm"
+            />
+          </div>
+        </motion.div>
+
+        {/* 3 Columns Below with Mint Buttons */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 lg:gap-14 text-center mt-16">
+          {features.map((item, index) => (
+            <motion.div
+              key={item.title}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: '-60px' }}
+              transition={{ duration: 0.5, delay: index * 0.15 }}
+              className="flex flex-col items-center"
+            >
+              <h3 className="font-bold text-2xl md:text-3xl text-white mb-4 tracking-tight">
+                {item.title}
+              </h3>
+              <p
+                className="text-sm md:text-base leading-relaxed mb-8 max-w-sm"
+                style={{ color: '#E8F5FF' }}
+              >
+                {item.description}
+              </p>
+              <Link to={item.btnHref} className="pill-btn mt-auto">
+                {item.btnText}
+              </Link>
+            </motion.div>
+          ))}
+        </div>
       </Container>
     </section>
   );

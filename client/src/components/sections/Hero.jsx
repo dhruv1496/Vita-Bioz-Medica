@@ -1,171 +1,91 @@
-import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Leaf, Shield, Award, Truck } from 'lucide-react';
 import { Container } from '../ui/Container';
-import { Button } from '../ui/Button';
-import { Separator } from '../ui/Separator';
-
-const stats = [
-  { value: '23', label: 'Herbal Ingredients', icon: Leaf },
-  { value: '15+', label: 'Years of Excellence', icon: Award },
-  { value: '500+', label: 'Satisfied Clients', icon: Shield },
-  { value: 'Pan India', label: 'Delivery Network', icon: Truck },
-];
-
-const trustBadges = [
-  'WHO-GMP Certified',
-  'ISO 9001:2015',
-  'AYUSH Approved',
-  'Heavy Metal Tested',
-  'Cruelty Free',
-  'Sustainably Sourced',
-];
 
 export function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden bg-gradient-to-br from-gray-50 via-white to-cream" aria-labelledby="hero-heading">
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,#e8f4ef_0%,transparent_70%)]" aria-hidden="true" />
-      <div className="absolute top-0 left-0 right-0 h-20 bg-gradient-to-b from-white to-transparent" aria-hidden="true" />
+    <section
+      className="relative min-h-[92vh] flex flex-col justify-between overflow-hidden text-white pt-32 pb-12"
+      style={{
+        background: 'linear-gradient(180deg, #1C60D5 0%, #1752B6 100%)',
+      }}
+      aria-labelledby="hero-heading"
+    >
+      {/* Background Soft Ambient Pattern */}
+      <div
+        className="absolute inset-0 opacity-20 pointer-events-none"
+        style={{
+          backgroundImage: 'radial-gradient(circle at 75% 45%, #9EE6B2 0%, transparent 55%)'
+        }}
+        aria-hidden="true"
+      />
 
-      <Container>
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center py-20 lg:py-32 relative z-10">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
-          >
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary-muted text-primary rounded-full text-sm font-medium mb-6">
-              <Leaf className="h-4 w-4" aria-hidden="true" />
-              Premium Ayurvedic Formulations Since 2009
-            </div>
-
-            <h1
-              id="hero-heading"
-              className="font-serif text-5xl lg:text-6xl font-semibold leading-tight text-gray-900 mb-6"
-            >
-              Nature&apos;s Wisdom,<br />
-              <span className="text-primary">Science&apos;s Precision</span>
+      <Container className="relative z-10 flex-1 flex flex-col justify-between">
+        {/* Main Content Area */}
+        <div className="grid lg:grid-cols-12 gap-10 items-center flex-1 my-auto py-8">
+          {/* Left Title Column */}
+          <div className="lg:col-span-7">
+            <h1 id="hero-heading" className="hero-giant-title">
+              Welcome to<br />
+              <span className="text-[#9EE6B2]">Vita Bioz</span>
             </h1>
 
-            <p className="text-lg lg:text-xl text-gray-600 leading-relaxed mb-8 max-w-xl">
-              Discover premium Ayurvedic healthcare solutions crafted from 23 time-tested herbs.
-              Our flagship Foie Sain liver tonic combines ancient wisdom with modern quality standards.
+            <p
+              className="mt-6 text-xl md:text-2xl max-w-xl font-normal leading-snug"
+              style={{ color: '#E6FAF0' }}
+            >
+              Authentic Ayurvedic formulations combining 23 time-tested classical botanicals with modern WHO-GMP precision.
             </p>
+          </div>
 
-            <div className="flex flex-wrap gap-4 mb-12">
-              <Button size="lg" asChild>
-                <Link to="/products">
-                  Explore Products
-                  <ArrowRight className="h-5 w-5" aria-hidden="true" />
-                </Link>
-              </Button>
-              <Button variant="outline" size="lg" asChild>
-                <Link to="/about">Our Story</Link>
-              </Button>
-            </div>
-
-            <div className="flex flex-wrap gap-6 text-sm">
-              {trustBadges.map((badge) => (
-                <span key={badge} className="flex items-center gap-1.5 px-3 py-1.5 bg-white/80 backdrop-blur-sm border border-gray-200 rounded-full text-gray-700">
-                  {badge}
-                </span>
-              ))}
-            </div>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2, ease: [0.25, 0.46, 0.45, 0.94] }}
-            className="relative"
-          >
-            <div className="relative">
-              <div className="absolute -inset-4 bg-gradient-to-r from-primary/10 to-secondary/10 rounded-3xl blur-2xl" aria-hidden="true" />
-              <div className="relative rounded-3xl overflow-hidden shadow-2xl bg-white border border-gray-100">
+          {/* Right Hero Visual Column */}
+          <div className="lg:col-span-5 flex justify-center lg:justify-end">
+            <div className="relative w-full max-w-xs md:max-w-sm flex justify-center">
+              <div
+                className="rounded-[40px] overflow-hidden shadow-2xl bg-white/10 backdrop-blur-sm border border-white/20 p-4 transition-transform hover:scale-[1.02] duration-300 max-h-[440px] flex flex-col items-center justify-center"
+              >
                 <img
                   src="/foie-sain-image.jpg"
-                  alt="Foie Sain Ayurvedic Liver Tonic - 200ml bottle with caramel colored syrup"
-                  className="w-full h-auto object-cover"
-                  loading="lazy"
+                  alt="Vita Bioz Foie Sain Ayurvedic Formulation"
+                  className="max-h-[340px] w-auto rounded-[28px] object-contain shadow-inner"
                 />
-                <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/60 to-transparent">
-                  <div className="flex items-center gap-4">
-                    <div className="h-16 w-16 rounded-xl bg-white/10 backdrop-blur-sm flex items-center justify-center">
-                      <img src="/foie-sain-logo.jpg" alt="Foie Sain Logo" className="h-10 w-auto" />
-                    </div>
-                    <div>
-                      <p className="font-serif text-xl font-semibold text-white">Foie Sain</p>
-                      <p className="text-secondary text-sm">Ayurvedic Liver Tonic • 200ml</p>
-                    </div>
+                <div className="mt-3 flex items-center justify-between w-full px-2">
+                  <div>
+                    <p className="font-bold text-white text-base">Foie Sain</p>
+                    <p className="text-[11px] text-[#9EE6B2] font-semibold uppercase tracking-wider">Ayurvedic Liver Tonic</p>
                   </div>
+                  <span className="px-2.5 py-0.5 bg-[#9EE6B2] text-black font-bold text-xs rounded-full">
+                    23 Herbs
+                  </span>
                 </div>
               </div>
             </div>
-
-            <div className="absolute -bottom-8 -right-8 lg:-bottom-12 lg:-right-12">
-              <motion.div
-                initial={{ scale: 0.9, opacity: 0 }}
-                animate={{ scale: 1, opacity: 1 }}
-                transition={{ delay: 0.4, duration: 0.5 }}
-                className="bg-white rounded-2xl p-6 shadow-xl border border-gray-100 min-w-[280px]"
-              >
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="h-12 w-12 rounded-xl bg-primary-muted flex items-center justify-center">
-                    <Shield className="h-6 w-6 text-primary" aria-hidden="true" />
-                  </div>
-                  <div>
-                    <p className="font-semibold text-gray-900">Clinically Validated</p>
-                    <p className="text-sm text-gray-500">Proven efficacy & safety</p>
-                  </div>
-                </div>
-                <Separator />
-                <div className="grid grid-cols-3 gap-4 mt-4">
-                  <div className="text-center">
-                    <p className="font-serif text-2xl font-bold text-primary">23</p>
-                    <p className="text-xs text-gray-500">Herbs</p>
-                  </div>
-                  <div className="text-center">
-                    <p className="font-serif text-2xl font-bold text-primary">100%</p>
-                    <p className="text-xs text-gray-500">Natural</p>
-                  </div>
-                  <div className="text-center">
-                    <p className="font-serif text-2xl font-bold text-primary">0</p>
-                    <p className="text-xs text-gray-500">Side Effects</p>
-                  </div>
-                </div>
-              </motion.div>
-            </div>
-          </motion.div>
+          </div>
         </div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.5 }}
-          className="mt-20 lg:mt-28 relative z-10"
-        >
-          <Separator className="mb-12" />
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
-              <motion.div
-                key={stat.label}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.6 + index * 0.1 }}
-                className="text-center p-6"
-              >
-                <div className="inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-primary-muted text-primary mb-4">
-                  <stat.icon className="h-7 w-7" aria-hidden="true" />
-                </div>
-                <p className="font-serif text-3xl lg:text-4xl font-bold text-gray-900">{stat.value}</p>
-                <p className="text-sm text-gray-600 mt-1">{stat.label}</p>
-              </motion.div>
-            ))}
-          </div>
-        </motion.div>
-      </Container>
+        {/* Bottom Hero Bar */}
+        <div className="pt-10 border-t border-white/15 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+          {/* Subtitle / Value Tag */}
+          <p
+            className="text-lg font-medium max-w-lg"
+            style={{ color: '#E6FAF0' }}
+          >
+            Your Trusted Ayurvedic Healthcare & Liver Wellness Provider
+          </p>
 
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-white to-transparent pointer-events-none" aria-hidden="true" />
+          {/* CTA Group with Signature Asterisk Badge */}
+          <div className="flex items-center gap-3">
+            <div className="asterisk-pill" title="Certified Excellence">
+              ✳
+            </div>
+            <Link to="/products" className="pill-btn">
+              Explore Products +
+            </Link>
+            <Link to="/contact" className="pill-btn-white">
+              Contact Us +
+            </Link>
+          </div>
+        </div>
+      </Container>
     </section>
   );
 }
