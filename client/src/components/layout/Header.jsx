@@ -51,17 +51,12 @@ export function Header() {
               )}
               aria-label="Vita Bioz Medica"
             >
-              <div className={cn(
-                'w-9 h-9 rounded-full border-2 flex items-center justify-center transition-colors',
-                !scrolled && isHome ? 'border-white text-white' : 'border-black text-black'
-              )}>
-                {/* Minimalist Smile/Wellness Icon matching Wix template */}
-                <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
-                  <circle cx="12" cy="12" r="9" />
-                  <path d="M8 14.5s1.5 2 4 2 4-2 4-2" />
-                  <line x1="9" y1="9.5" x2="9.01" y2="9.5" />
-                  <line x1="15" y1="9.5" x2="15.01" y2="9.5" />
-                </svg>
+              <div className="w-10 h-10 rounded-full bg-white shadow-md flex items-center justify-center p-1 flex-shrink-0 border border-gray-100">
+                <img
+                  src="/logo-icon.png"
+                  alt="Vita Bioz Medica Logo"
+                  className="w-full h-full object-contain"
+                />
               </div>
               <span className="font-bold text-xl md:text-2xl tracking-tight">Vita Bioz</span>
             </Link>
@@ -136,7 +131,12 @@ export function Header() {
               >
                 <div>
                   <div className="flex items-center justify-between pb-6 border-b border-black/10">
-                    <span className="font-bold text-2xl tracking-tight">Vita Bioz</span>
+                    <div className="flex items-center gap-3">
+                      <div className="w-10 h-10 rounded-full bg-white shadow-sm flex items-center justify-center p-1 flex-shrink-0">
+                        <img src="/logo-icon.png" alt="Vita Bioz Medica Logo" className="w-full h-full object-contain" />
+                      </div>
+                      <span className="font-bold text-2xl tracking-tight">Vita Bioz</span>
+                    </div>
                     <button
                       type="button"
                       className="w-10 h-10 rounded-full bg-black text-white flex items-center justify-center"

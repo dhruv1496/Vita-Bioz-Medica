@@ -123,16 +123,12 @@ export function About() {
               </div>
             </div>
             <div className="relative">
-              <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl bg-gray-100">
-                <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-primary/10 to-secondary/10">
-                  <div className="text-center p-8">
-                    <div className="h-24 w-24 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-6">
-                      <Leaf className="h-12 w-12 text-primary" />
-                    </div>
-                    <h3 className="font-serif text-2xl font-semibold text-gray-900 mb-2">Our Facility</h3>
-                    <p className="text-gray-600">WHO-GMP Certified Manufacturing Unit, Panchkula</p>
-                  </div>
-                </div>
+              <div className="aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl bg-white p-8 flex items-center justify-center border border-gray-100">
+                <img
+                  src="/logo-cropped.png"
+                  alt="Vita Bioz Medica Corporate Brand"
+                  className="max-h-64 w-auto object-contain"
+                />
               </div>
               <div className="absolute -bottom-6 -left-6 bg-white rounded-2xl p-6 shadow-xl border border-gray-100 max-w-xs">
                 <div className="flex items-center gap-3 mb-3">
